@@ -1,12 +1,4 @@
-<?php
-//if "email" variable is filled out, send email
-  if (isset($_REQUEST['email']))  {
-  
-  //Email information
-  $admin_email = "someone@example.com";
-  $email = $_REQUEST['email'];
-  $subject = "Wachtwoord reset voor: $email";
-  $comment = '<!doctype html>
+<!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 	<head>
 		<meta charset="UTF-8">
@@ -102,7 +94,7 @@
 	/*
 	@tab Page
 	@section Background Style
-	@tip Set the background color and top border for your email. You may want to choose colors that match your companys branding.
+	@tip Set the background color and top border for your email. You may want to choose colors that match your company's branding.
 	*/
 		body,#bodyTable{
 			/*@editable*/background-color:#FAFAFA;
@@ -110,7 +102,7 @@
 	/*
 	@tab Page
 	@section Background Style
-	@tip Set the background color and top border for your email. You may want to choose colors that match your companys branding.
+	@tip Set the background color and top border for your email. You may want to choose colors that match your company's branding.
 	*/
 		#bodyCell{
 			/*@editable*/border-top:0;
@@ -190,7 +182,7 @@
 	/*
 	@tab Preheader
 	@section Preheader Style
-	@tip Set the background color and borders for your emails preheader area.
+	@tip Set the background color and borders for your email's preheader area.
 	*/
 		#templatePreheader{
 			/*@editable*/background-color:#FAFAFA;
@@ -206,7 +198,7 @@
 	/*
 	@tab Preheader
 	@section Preheader Text
-	@tip Set the styling for your emails preheader text. Choose a size and color that is easy to read.
+	@tip Set the styling for your email's preheader text. Choose a size and color that is easy to read.
 	*/
 		#templatePreheader .mcnTextContent,#templatePreheader .mcnTextContent p{
 			/*@editable*/color:#656565;
@@ -218,7 +210,7 @@
 	/*
 	@tab Preheader
 	@section Preheader Link
-	@tip Set the styling for your emails preheader links. Choose a color that helps them stand out from your text.
+	@tip Set the styling for your email's preheader links. Choose a color that helps them stand out from your text.
 	*/
 		#templatePreheader .mcnTextContent a,#templatePreheader .mcnTextContent p a{
 			/*@editable*/color:#656565;
@@ -228,7 +220,7 @@
 	/*
 	@tab Header
 	@section Header Style
-	@tip Set the background color and borders for your emails header area.
+	@tip Set the background color and borders for your email's header area.
 	*/
 		#templateHeader{
 			/*@editable*/background-color:#FFFFFF;
@@ -244,7 +236,7 @@
 	/*
 	@tab Header
 	@section Header Text
-	@tip Set the styling for your emails header text. Choose a size and color that is easy to read.
+	@tip Set the styling for your email's header text. Choose a size and color that is easy to read.
 	*/
 		#templateHeader .mcnTextContent,#templateHeader .mcnTextContent p{
 			/*@editable*/color:#202020;
@@ -256,7 +248,7 @@
 	/*
 	@tab Header
 	@section Header Link
-	@tip Set the styling for your emails header links. Choose a color that helps them stand out from your text.
+	@tip Set the styling for your email's header links. Choose a color that helps them stand out from your text.
 	*/
 		#templateHeader .mcnTextContent a,#templateHeader .mcnTextContent p a{
 			/*@editable*/color:#2BAADF;
@@ -266,7 +258,7 @@
 	/*
 	@tab Body
 	@section Body Style
-	@tip Set the background color and borders for your emails body area.
+	@tip Set the background color and borders for your email's body area.
 	*/
 		#templateBody{
 			/*@editable*/background-color:#FFFFFF;
@@ -282,7 +274,7 @@
 	/*
 	@tab Body
 	@section Body Text
-	@tip Set the styling for your emails body text. Choose a size and color that is easy to read.
+	@tip Set the styling for your email's body text. Choose a size and color that is easy to read.
 	*/
 		#templateBody .mcnTextContent,#templateBody .mcnTextContent p{
 			/*@editable*/color:#202020;
@@ -294,7 +286,7 @@
 	/*
 	@tab Body
 	@section Body Link
-	@tip Set the styling for your emails body links. Choose a color that helps them stand out from your text.
+	@tip Set the styling for your email's body links. Choose a color that helps them stand out from your text.
 	*/
 		#templateBody .mcnTextContent a,#templateBody .mcnTextContent p a{
 			/*@editable*/color:#2BAADF;
@@ -304,7 +296,7 @@
 	/*
 	@tab Footer
 	@section Footer Style
-	@tip Set the background color and borders for your emails footer area.
+	@tip Set the background color and borders for your email's footer area.
 	*/
 		#templateFooter{
 			/*@editable*/background-color:#FAFAFA;
@@ -320,7 +312,7 @@
 	/*
 	@tab Footer
 	@section Footer Text
-	@tip Set the styling for your emails footer text. Choose a size and color that is easy to read.
+	@tip Set the styling for your email's footer text. Choose a size and color that is easy to read.
 	*/
 		#templateFooter .mcnTextContent,#templateFooter .mcnTextContent p{
 			/*@editable*/color:#656565;
@@ -332,7 +324,7 @@
 	/*
 	@tab Footer
 	@section Footer Link
-	@tip Set the styling for your emails footer links. Choose a color that helps them stand out from your text.
+	@tip Set the styling for your email's footer links. Choose a color that helps them stand out from your text.
 	*/
 		#templateFooter .mcnTextContent a,#templateFooter .mcnTextContent p a{
 			/*@editable*/color:#656565;
@@ -486,7 +478,7 @@
 	/*
 	@tab Mobile Styles
 	@section Preheader Visibility
-	@tip Set the visibility of the emails preheader on small screens. You can hide it to save space.
+	@tip Set the visibility of the email's preheader on small screens. You can hide it to save space.
 	*/
 		#templatePreheader{
 			/*@editable*/display:block !important;
@@ -687,21 +679,4 @@ info@mboutrecht.nl
             </table>
         </center>
     </body>
-</html>';
-
- $headers = $headers = "Content-Type: text/html; charset=UTF-8"."\r\n";
- $headers .= "From:" . $email;
-  
-  //send email
-  mail($admin_email, "$subject", $comment, $headers );
-  
-  //Email response
-  echo "";
-  }
-  
-  //if "email" variable is not filled out, display the form
-  else  {
-?>
-<?php
-  }
-?>
+</html>
