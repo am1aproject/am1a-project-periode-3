@@ -1,0 +1,141 @@
+#header IMG  {
+		padding: 0px 0 0 10px;
+		position:relative;
+		z-index: 2; 
+	}
+.tile_list {
+	margin: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+}
+.tile {
+	float: left;
+	width: 220px;
+	height: 300px;
+	margin-right: 12px;
+	margin-bottom: 10px;
+	padding: 8px;
+	background: white;
+	border: 1px solid #E7E7E6;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+.tile img {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	border: none;
+}
+a {
+	color: #F60;
+	text-decoration: none;
+	outline: 0;
+}
+
+.tile-text {
+	position: fixed;
+		bottom: 0px;
+}
+.alignBtm {  
+	margin-top: 00%; 
+}
+.tile-sitename {
+
+	float: left;
+	width: 100%;
+	color: #006;
+	text-transform: capitalize;
+	margin: 5px 0 5px 0;
+}
+h2 {
+	font-size: 1.3em;
+    text-align: center;
+}
+.tile-url {
+	float: left;
+	width: 98%;
+	height: 20px;
+	background: url(logo/star.gif) no-repeat scroll 0 4px transparent;
+	padding: 5px 0 0 20px;
+	font-size: 11px;
+}
+ul {
+			margin: 0;
+			padding: 0;
+			background-color: #eee;
+			width: 500px;
+			list-style: none;
+			font: 13px/130% Verdana,Arial,Helvetica,Sans-Serif;
+			position:relative;
+}
+li {
+	padding-right:5px
+}
+
+ul li a {
+	display: block;
+	background-color: #eee;
+	text-indent: 5px;
+	height: 20px;
+	line-height: 20px;
+	color: #000;
+	text-decoration: none;
+}
+
+ul li a:hover {
+	background-color: #ddd;
+}
+
+span {
+		visibility:hidden;
+		position:absolute;
+		width:5px;
+		height:20px;
+		right:0;	
+}
+span.a {
+	background:#00AEEF;
+	top:0
+}
+span.b {
+	background:#00AEEF;
+	top:20px
+}
+span.c {
+	background:#00AEEF;
+	top:40px
+}
+span.d {
+	background:#00AEEF;
+	top:60px
+}
+span.e {
+	background:#00AEEF;
+	top:80px
+}
+span.f {
+	background:#00AEEF;
+	top:100px
+}
+
+ul li a:hover span {
+	visibility:visible
+}
+.floatl{
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 0;
+  float:left;
+}
+.floatr{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 999;
+  float:right;
+}
+.widthr{width:200px;}
+.widthl{width:200px;}

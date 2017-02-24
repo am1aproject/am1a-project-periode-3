@@ -1,7 +1,15 @@
 *, *:before, *:after {
   box-sizing: border-box;
 }
+.loginhead{
+    width: 100%;
+}
 
+.loginhead h3{
+    color: #029f5b;
+    font-weight: 700;
+    font-size: 30px;
+}
 .loginBox{
   -moz-box-shadow: 0 0 30px 5px #999;
   -webkit-box-shadow: 0 0 30px 5px #999;
@@ -103,7 +111,6 @@ a:hover {
 .tab-group .active a {
   background: #1ab188;
   color: #ffffff;
-  align-content: center;
 }
 
 .tab-content > div:last-child {
@@ -135,15 +142,10 @@ label .req {
 }
 
 label.active {
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
-  left: 2px;
-  font-size: 14px;
-  align-content: center;
+  
 }
 label.active .req {
   opacity: 0;
-  align-content: center;
 }
 
 label.highlight {
@@ -220,10 +222,12 @@ body {
 	-webkit-transition: all 0.1s linear;
 	-moz-transition: all 0.1s linear;
 	transition: all 0.1s linear;
+    align-content: center;
 }
 .panel-login>.panel-heading a.active{
 	color: #029f5b;
 	font-size: 18px;
+    align-content: center;
 }
 .panel-login>.panel-heading hr{
 	margin-top: 10px;
