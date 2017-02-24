@@ -3,8 +3,9 @@
   if (isset($_REQUEST['email']))  {
   
   //Email information
-  $admin_email = "someone@example.com";
+  
   $email = $_REQUEST['email'];
+  $admin_email = $email;
   $subject = "Wachtwoord reset voor: $email";
   $comment = '<!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
@@ -600,7 +601,7 @@
 
 <p style="font-family: Verdana, Geneva, sans-serif; font-size: 16px; font-style: italic; font-weight: normal; text-align: left;">Een wachtwoord reset is aangevraagd.<br>
 <br>
-Klik op de wachtwoord reset als u dit heeft aangevraagd.<br>
+Klik op de wachtwoord reset knop als u dit heeft aangevraagd.<br>
 Zo niet? Neem zo snel mogelijk contact op met een administrator.<br>
 <br>
 &nbsp;</p>
@@ -690,7 +691,7 @@ info@mboutrecht.nl
 </html>';
 
  $headers = $headers = "Content-Type: text/html; charset=UTF-8"."\r\n";
- $headers .= "From:" . $email;
+ $headers .= "From: info@mboutrecht.nl";
   
   //send email
   mail($admin_email, "$subject", $comment, $headers );
